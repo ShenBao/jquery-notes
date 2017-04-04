@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <script src="http://cdn.static.runoob.com/libs/jquery/1.10.2/jquery.min.js">
+    </script>
+    <script>
+        $(document).ready(function(){
+            $("#btn1").click(function(){
+                $("#runoob").attr("href","http://www.runoob.com/jquery");
+            });
+
+            $("#btn2").click(function(){
+                $("#runoob").attr({
+                    "href" : "http://www.runoob.com/jquery",
+                    "title" : "jQuery 教程"
+                });
+
+            });
+
+        });
+    </script>
+</head>
+
+<body>
+<p><a href="http://www.runoob.com" id="runoob">菜鸟教程</a></p>
+<button id="btn1">修改 href 值</button>
+<button id="btn2">修改 href 值和 title</button>
+<p>点击按钮修改后，可以点击链接查看链接地址是否变化。</p>
+</body>
+</html>

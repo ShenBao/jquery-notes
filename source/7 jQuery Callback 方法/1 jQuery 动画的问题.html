@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <script src="http://cdn.static.runoob.com/libs/jquery/1.10.2/jquery.min.js">
+    </script>
+    <script>
+        $(document).ready(function(){
+//            在隐藏效果完全实现后回调函数:
+            $("button").click(function(){
+                $("p").hide("slow",function(){
+                    alert("段落现在被隐藏了");
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+<button>隐藏</button>
+<p>我们段落内容，点击“隐藏”按钮我就会消失</p>
+</body>
+</html>

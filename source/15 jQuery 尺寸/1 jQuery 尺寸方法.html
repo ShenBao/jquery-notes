@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <script src="http://cdn.static.runoob.com/libs/jquery/1.10.2/jquery.min.js">
+    </script>
+    <script>
+        $(document).ready(function(){
+            $("#btn1").click(function(){
+                var txt="";
+                txt+="div 的宽度是: " + $("#div1").width() + "</br>";
+                txt+="div 的高度是: " + $("#div1").height();
+                $("#div1").html(txt);
+            });
+
+            $("#btn2").click(function(){
+                var txt="";
+                txt+="div 宽度，包含内边距: " + $("#div1").innerWidth() + "</br>";
+                txt+="div 高度，包含内边距: " + $("#div1").innerHeight();
+                $("#div1").html(txt);
+            });
+
+            $("#btn3").click(function () {
+                var txt='';
+                txt+="div 宽度，包含内边距和边框："+$("#div1").outerWidth() + "</br>";
+                txt+="div 高度，包含内边距和边框："+$("#div1").outerHeight();
+                $("#div1").html(txt);
+            })
+
+        });
+    </script>
+</head>
+<body>
+
+<div id="div1" style="height:100px;width:300px;padding:10px;margin:3px;border:1px solid blue;background-color:lightblue;"></div>
+<br>
+<button id="btn1">显示 div 元素的尺寸</button>
+<p>width() - 返回元素的宽度</p>
+<p>height() - 返回元素的高度</p>
+
+<button id="btn2">显示 div 元素的尺寸</button><br>
+<p>innerWidth() - 返回元素的宽度，包含内边距</p>
+<p>innerWidth() - 返回元素的高度，包含内边距</p>
+
+<button id="btn3">显示 div 元素的尺寸</button>
+<p>innerWidth() - 返回元素的宽度，包含内边距和边框</p>
+<p>innerWidth() - 返回元素的高度，包含内边距和边框</p>
+</body>
+</html>
